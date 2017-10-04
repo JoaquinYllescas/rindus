@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Arial;
+  background-color: #c9c9c9;
+  padding: 50px 40px; }
+
+header, main {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+/*HEADER STYLES*/
+header {
+  overflow: hidden;
+  padding-bottom: 40px; }
+  header > a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    /*float: left;*/ }
+    header > a h1 {
+      font-size: 30px;
+      color: #000000;
+      text-align: center; }
+  header nav {
+    width: 100%;
+    overflow: hidden;
+    /*float: right;*/ }
+    header nav ul {
+      display: block;
+      padding-top: 20px;
+      overflow: hidden;
+      /*text-align: center;*/ }
+      header nav ul li {
+        display: block;
+        width: 50%;
+        float: left;
+        padding: 5px 5px;
+        box-sizing: border-box; }
+        header nav ul li a {
+          display: block;
+          color: #333333;
+          padding: 0px 15px;
+          font-size: 14px;
+          text-align: center; }
+
+/*HEADER END STYLES*/
+/*MAIN STYLES*/
+.filters {
+  overflow: hidden; }
+  .filters span {
+    display: block;
+    padding: 20px 3px;
+    font-size: 14px;
+    text-align: center; }
+  .filters ul {
+    /*float: left;*/
+    display: block;
+    overflow: hidden;
+    margin: 0px auto;
+    text-align: center; }
+    .filters ul li {
+      /*float: left;*/
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 8px;
+      margin-left: 20px;
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer; }
+      .filters ul li input, .filters ul li label {
+        cursor: pointer;
+        font-size: 12px; }
+      .filters ul li.meat {
+        background-color: #dd3b09; }
+      .filters ul li.vegetable {
+        background-color: #3b932b; }
+      .filters ul li.fruit {
+        background-color: #ea9400; }
+
+.cards {
+  overflow: hidden; }
+  .cards ul {
+    display: block;
+    overflow: hidden; }
+    .cards ul li {
+      /*width: 25%;*/
+      width: 100%;
+      padding: 0px 10px;
+      box-sizing: border-box;
+      float: left;
+      margin-top: 20px; }
+      .cards ul li .content {
+        background-color: #ffffff; }
+        .cards ul li .content .img {
+          height: 155px;
+          background-color: #787777; }
+        .cards ul li .content .text {
+          padding: 20px 20px; }
+          .cards ul li .content .text h3 {
+            font-weight: bold;
+            float: left;
+            padding-bottom: 10px; }
+          .cards ul li .content .text .filter-tag {
+            float: right;
+            padding: 3px 8px;
+            border-radius: 8px;
+            margin-left: 20px;
+            color: #ffffff;
+            font-size: 14px;
+            /*background-color: #dd3b09;*/ }
+            .cards ul li .content .text .filter-tag.fruit {
+              background-color: #ea9400; }
+            .cards ul li .content .text .filter-tag.vegetable {
+              background-color: #3b932b; }
+            .cards ul li .content .text .filter-tag.meat {
+              background-color: #dd3b09; }
+          .cards ul li .content .text p {
+            clear: both;
+            padding: 10px 0px;
+            font-size: 14px;
+            line-height: 20px; }
+          .cards ul li .content .text .info {
+            display: block;
+            text-decoration: none;
+            font-size: 14px;
+            color: #000000;
+            padding-left: 20px;
+            position: relative; }
+            .cards ul li .content .text .info:before {
+              display: block;
+              content: '>';
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              left: 2px;
+              top: -3px;
+              font-size: 20px;
+              color: red; }
+            .cards ul li .content .text .info.fruit:before {
+              color: #ea9400; }
+            .cards ul li .content .text .info.vegetable:before {
+              color: #3b932b; }
+            .cards ul li .content .text .info.meat:before {
+              color: #dd3b09; }
+
+@media only screen and (min-width: 640px) {
+  header nav ul li {
+    width: 33.3%; }
+  .cards ul li {
+    width: 50%; } }
+
+@media only screen and (min-width: 768px) {
+  header > a {
+    float: left;
+    display: inline-block;
+    width: 30%; }
+    header > a h1 {
+      text-align: left; }
+  header nav {
+    width: 70%;
+    float: right; }
+    header nav ul {
+      padding-top: 0px; }
+  main .filters > span {
+    float: left;
+    padding: 5px; }
+  main .filters ul {
+    float: left; } }
+
+@media only screen and (min-width: 960px) {
+  header nav ul li {
+    width: 15.5%; }
+  .cards ul li {
+    width: 33.3%; } }
+
+@media only screen and (min-width: 1200px) {
+  .cards ul li {
+    width: 25%; } }
+
+/*MAIN END STYLES*/
